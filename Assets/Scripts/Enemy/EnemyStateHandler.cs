@@ -15,9 +15,10 @@ namespace Scripts.Enemy
 
     public class EnemyStateHandler : MonoBehaviour
     {
-        public float EnemySpeed = 4;
-        public EnemyFacade m_enemyFacade;
+        private float m_enemySpeed = 4;
         private IEnemyState m_currentState;
+
+        public float EnemySpeed => m_enemySpeed;
 
         private List<IEnemyState> m_allStates = new List<IEnemyState>();
 
@@ -50,6 +51,11 @@ namespace Scripts.Enemy
         private void Update()
         {
             m_currentState?.Tick();
+        }
+
+        public void SetEnemySpeed(float speed)
+        {
+            m_enemySpeed = speed;
         }
     }
 

@@ -7,15 +7,14 @@ using Zenject;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Spawner Settings"), Space(10f)]
-    [SerializeField] private float spawnInterval = 2f;
-    [SerializeField] private float spawnDistance = 5f; 
+    [SerializeField] private float m_spawnInterval = 2f;
+    [SerializeField] private float m_spawnDistance = 5f; 
 
     public Camera mainCamera;
-    private float timer;
+    private float m_timer;
 
-    [SerializeField] private float decreaseInterval = 10f;
-    private float spawnTimer;
-    private float decreaseTimer;
+    [SerializeField] private float m_decreaseInterval = 10f;
+    private float m_decreaseTimer;
 
     [Inject]
     private readonly EnemyFacade.Factory m_enemyFactory;
@@ -25,35 +24,35 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        spawnInterval = m_settings.SpawnInterval;
-        spawnDistance = m_settings.SpawnDistance;
+        m_spawnInterval = m_settings.SpawnInterval;
+        m_spawnDistance = m_settings.SpawnDistance;
 
-        timer = spawnInterval;
-        decreaseTimer = m_settings.SpawnRateTimer;
+        m_timer = m_spawnInterval;
+        m_decreaseTimer = m_settings.SpawnRateTimer;
     }
 
     private void Update()
     {
-        decreaseTimer -= Time.deltaTime;
-        timer -= Time.deltaTime;
+        m_decreaseTimer -= Time.deltaTime;
+        m_timer -= Time.deltaTime;
 
-        if (timer <= 0f)
+        if (m_timer <= 0f)
         {
-            timer = spawnInterval;
+            m_timer = m_spawnInterval;
             SpawnEnemy();
         }
 
-        if (decreaseTimer <= 0f)
+        if (m_decreaseTimer <= 0f)
         {
-            decreaseTimer = decreaseInterval;
+            m_decreaseTimer = m_decreaseInterval;
             DecreaseSpawnInterval();
         }
     }
 
     private void DecreaseSpawnInterval()
     {
-        spawnInterval *= m_settings.SpawnPersantageMulti;
-        spawnInterval = Mathf.Max(spawnInterval, 0.1f);
+        m_spawnInterval *= m_settings.SpawnPersantageMulti;
+        m_spawnInterval = Mathf.Max(m_spawnInterval, 0.1f);
     }
 
     private void SpawnEnemy()
@@ -68,16 +67,16 @@ public class EnemySpawner : MonoBehaviour
         switch (side)
         {
             case 0: 
-                spawnPosition = new Vector3(cameraPosition.x - cameraWidth / 2 - spawnDistance, Random.Range(cameraPosition.y - cameraHeight / 2, cameraPosition.y + cameraHeight / 2), 0);
+                spawnPosition = new Vector3(cameraPosition.x - cameraWidth / 2 - m_spawnDistance, Random.Range(cameraPosition.y - cameraHeight / 2, cameraPosition.y + cameraHeight / 2), 0);
                 break;
             case 1: 
-                spawnPosition = new Vector3(cameraPosition.x + cameraWidth / 2 + spawnDistance, Random.Range(cameraPosition.y - cameraHeight / 2, cameraPosition.y + cameraHeight / 2), 0);
+                spawnPosition = new Vector3(cameraPosition.x + cameraWidth / 2 + m_spawnDistance, Random.Range(cameraPosition.y - cameraHeight / 2, cameraPosition.y + cameraHeight / 2), 0);
                 break;
             case 2: 
-                spawnPosition = new Vector3(Random.Range(cameraPosition.x - cameraWidth / 2, cameraPosition.x + cameraWidth / 2), cameraPosition.y - cameraHeight / 2 - spawnDistance, 0);
+                spawnPosition = new Vector3(Random.Range(cameraPosition.x - cameraWidth / 2, cameraPosition.x + cameraWidth / 2), cameraPosition.y - cameraHeight / 2 - m_spawnDistance, 0);
                 break;
             case 3: 
-                spawnPosition = new Vector3(Random.Range(cameraPosition.x - cameraWidth / 2, cameraPosition.x + cameraWidth / 2), cameraPosition.y + cameraHeight / 2 + spawnDistance, 0);
+                spawnPosition = new Vector3(Random.Range(cameraPosition.x - cameraWidth / 2, cameraPosition.x + cameraWidth / 2), cameraPosition.y + cameraHeight / 2 + m_spawnDistance, 0);
                 break;
         }
 

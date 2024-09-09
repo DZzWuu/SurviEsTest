@@ -32,8 +32,6 @@ public class Bullet : MonoBehaviour, IPoolable<float,Transform ,BulletType, IMem
     public void OnDespawned()
     {
         m_isStarted = false;
-        //m_pool = null;
-
         gameObject.SetActive(false);
     }
 
@@ -59,13 +57,6 @@ public class Bullet : MonoBehaviour, IPoolable<float,Transform ,BulletType, IMem
             return;
 
         transform.position = Vector2.MoveTowards(transform.position, m_bulletTarget.position, Time.deltaTime * m_bulletSpeed);
-        //transform.rotation = Quaternion.LookRotation(new Vector3(0,0,m_bulletTarget.position.z) - new Vector3(0, 0, transform.position.z), Vector3.forward);
-
-        //if (m_bulletTarget == null)
-        //{
-        //    m_pool.Despawn(this);
-        //    return;
-        //}
     }
 
     public void OnSpawned(float bulletSpeed, Transform bulletTarget, BulletType type, IMemoryPool pool)

@@ -39,7 +39,7 @@ namespace Scripts.Enemy
 
             m_animator.runtimeAnimatorController = m_enemyConfig[random].RuntimeAnimatorController;
             m_health.SetHealth(m_enemyConfig[random].MaxHealth);
-            m_stateHandler.EnemySpeed = m_enemyConfig[random].MovementSpeed;
+            m_stateHandler.SetEnemySpeed(m_enemyConfig[random].MovementSpeed);
         }
 
         public void Kill()

@@ -4,17 +4,9 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Camera m_mainCamera;
-    public Vector3 m_cameraOffset;
-    public Transform m_playerPostion;
-    public AnimationClip m_animCurve;
-
-    private Vector3 m_targetPostion;
-
-    private void Awake()
-    {
-        m_mainCamera = GetComponent<Camera>();
-    }
+    [SerializeField] private Camera m_mainCamera;
+    [SerializeField] private Vector3 m_cameraOffset;
+    [SerializeField] private Transform m_playerPostion;
 
     private void LateUpdate()
     {
