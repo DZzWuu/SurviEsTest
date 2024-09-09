@@ -1,0 +1,19 @@
+{
+    "name": "Scripts.Loot",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:ef1aae9762a92c942873c6f1459c2799",
+        "GUID:16229ea3475da5b4988aa91605526a6f",
+        "GUID:37191ae353662fd48a0a9c0e9d0b289d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

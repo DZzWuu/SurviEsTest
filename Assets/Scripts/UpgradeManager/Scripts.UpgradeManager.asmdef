@@ -1,0 +1,20 @@
+{
+    "name": "Scripts.UpgradeManager",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fade873f9a9156041a8db4a6b9f253e5",
+        "GUID:597dc41ec41096d49b961a12046f5805",
+        "GUID:37191ae353662fd48a0a9c0e9d0b289d",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:b4feca9264bff5f409ffd1f7dfeb1548"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

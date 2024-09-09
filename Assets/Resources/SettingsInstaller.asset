@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c886a6092f5eaa044bcbbd8174501542, type: 3}
+  m_Name: SettingsInstaller
+  m_EditorClassIdentifier: 
+  m_playerSettings:
+    MovementSettings:
+      MovementSpeed: 4
+    HealthSettings:
+      PlayerMaxHealth: 100
+    CombatSettings:
+      ShootRate: 0.3
+      ShootRange: 12
+      AmmoCount: 120
+  m_levelConfig:
+    LevelConfig:
+      LevelConfig: {fileID: 11400000, guid: 5b3613abd13effc488c6f3f25b475661, type: 2}
+  m_enemySpawnerConfig:
+    SpawnerSettings:
+      SpawnInterval: 1
+      SpawnDistance: 6.25
+      SpawnRateTimer: 15
+      SpawnPersantageMulti: 0.85
+  m_enemyConfigs:
+  - {fileID: 11400000, guid: 87ed69176c9692b439abac7f1d233a3b, type: 2}
+  - {fileID: 11400000, guid: 7b39e434e2705644aa5ce2b2a5fa7ac3, type: 2}
+  - {fileID: 11400000, guid: 907f25f9d1a365649bebc0cd34b74d53, type: 2}
+  - {fileID: 11400000, guid: e36f324dbdfc88d4ab7ac9cee0fef1a1, type: 2}
+  m_gamePrefabs:
+    EnemyPrefab: {fileID: 9179773888097698643, guid: 90546826cd77a9546b44af9f4a492a95, type: 3}
+    BulletPrefab: {fileID: 5672107868517723227, guid: 860d1f5ab1be0a14dbc7fb8ba7dde70f, type: 3}
+    ExperienceGemPrefab: {fileID: 7917609535788888835, guid: 4323a5ca80a94c843b7b500e944a469b, type: 3}
+    AmmoBoxPrefab: {fileID: 7938023716124284249, guid: e16b50927a8518a4d8c2cda184a9e150, type: 3}
+    HealthPotionPrefab: {fileID: 1971186406025041209, guid: c2579d332a5ed924e80049c844223959, type: 3}
