@@ -11,7 +11,7 @@ public class GameInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        InstallGameManager();
+        //InstallGameManager();
         InstallEnemyFactory();
         InstallBulletFactory();
         InstallExperienceGemsFactory();
@@ -30,10 +30,9 @@ public class GameInstaller : MonoInstaller
             .FromPoolableMemoryPool<float, float, float, EnemyFacade, EnemyFacadePool>(poolBinder => poolBinder
             .WithInitialSize(10)
             .FromComponentInNewPrefab(_settings.EnemyPrefab)
+            //.FromSubContainerResolve()
+            //.ByNewPrefabInstaller<EnemyInstaller>(_settings.EnemyPrefab)
             .UnderTransformGroup("Enemies"));
-        //.FromSubContainerResolve()
-        //.ByNewPrefabInstaller<EnemyInstaller>(_settings.EnemyPrefab)
-        //.UnderTransformGroup("Enemies"));
     }
 
     private void InstallBulletFactory()
@@ -71,15 +70,17 @@ public class GameInstaller : MonoInstaller
 
     private void InstallSignals()
     {
-        SignalBusInstaller.Install(Container);
+        GameSignalsInstaller.Install(Container);
 
-        Container.DeclareSignal<EndGameSignal>();
-        Container.DeclareSignal<KillEnemySignal>();
-        Container.DeclareSignal<UpgradeAmmoSignal>();
-        Container.DeclareSignal<PlayertHealthSignal>();
-        Container.DeclareSignal<ExperienceSignal>();
-        Container.DeclareSignal<UpgradeLevelDataSignal>();
-        Container.DeclareSignal<UpgradeStatsSignal>();
+        //SignalBusInstaller.Install(Container);
+
+        //Container.DeclareSignal<EndGameSignal>();
+        //Container.DeclareSignal<KillEnemySignal>();
+        //Container.DeclareSignal<UpgradeAmmoSignal>();
+        //Container.DeclareSignal<PlayertHealthSignal>();
+        //Container.DeclareSignal<ExperienceSignal>();
+        //Container.DeclareSignal<UpgradeLevelDataSignal>();
+        //Container.DeclareSignal<UpgradeStatsSignal>();
     }
 
     [Serializable]
