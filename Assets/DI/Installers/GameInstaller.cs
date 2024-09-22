@@ -29,9 +29,8 @@ public class GameInstaller : MonoInstaller
         Container.BindFactory<float, float, float, EnemyFacade, EnemyFacade.Factory>()
             .FromPoolableMemoryPool<float, float, float, EnemyFacade, EnemyFacadePool>(poolBinder => poolBinder
             .WithInitialSize(10)
-            .FromComponentInNewPrefab(_settings.EnemyPrefab)
-            //.FromSubContainerResolve()
-            //.ByNewPrefabInstaller<EnemyInstaller>(_settings.EnemyPrefab)
+            .FromSubContainerResolve()
+            .ByNewPrefabInstaller<EnemyInstaller>(_settings.EnemyPrefab)
             .UnderTransformGroup("Enemies"));
     }
 

@@ -189,10 +189,10 @@ GameObject:
   - component: {fileID: 5764111510626183171}
   - component: {fileID: 7969728393793889544}
   - component: {fileID: 7883018178104624630}
-  - component: {fileID: 4764585487672472724}
-  - component: {fileID: 5243928164902872777}
-  - component: {fileID: 8402030027676690946}
   - component: {fileID: -7629577339435857034}
+  - component: {fileID: 3292217077542493338}
+  - component: {fileID: 4764585487672472724}
+  - component: {fileID: 8402030027676690946}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -362,6 +362,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7629577339435857034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179773888097698643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0af68d0467ae647a7d8ba640a7eae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_healthType: 0
+  m_maxHealth: 30
+--- !u!114 &3292217077542493338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179773888097698643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb54bb4ad31ac2e4eb10eebbae05b131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4764585487672472724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,21 +406,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 907f25f9d1a365649bebc0cd34b74d53, type: 2}
   m_animator: {fileID: 7883018178104624630}
   m_health: {fileID: -7629577339435857034}
-  m_stateHandler: {fileID: 5243928164902872777}
---- !u!114 &5243928164902872777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9179773888097698643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1deaaa396946994cae982bedccd602d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemySpeed: 4
-  m_enemyFacade: {fileID: 4764585487672472724}
 --- !u!114 &8402030027676690946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,28 +413,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9179773888097698643}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _components:
   - {fileID: 4764585487672472724}
+  - {fileID: 3292217077542493338}
   _identifier: 
   _useSceneContext: 0
   _context: {fileID: 0}
   _bindType: 0
---- !u!114 &-7629577339435857034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9179773888097698643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0af68d0467ae647a7d8ba640a7eae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_healthType: 0
-  m_maxHealth: 30
