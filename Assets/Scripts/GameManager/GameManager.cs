@@ -9,6 +9,10 @@ using Cysharp.Threading.Tasks;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Important!!! WIP ScoreManager etc. soon to avoid SRP, GameManger only manage scene loading
+///  </summary>
+
 public class GameManager : MonoBehaviour , IGameManager
 {
     public enum GameState
