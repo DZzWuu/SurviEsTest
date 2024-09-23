@@ -1,7 +1,2 @@
 Hello,
-
-
 the options are located in the Assets/Resources/SettingsInstaller, and the architecture is built on Zenject.
-
-The biggest challenge for me was managing my time due to task scope and confine time, which is why the poisoned bullet and hand were not completed,
-as well as fixing enemies and their filp

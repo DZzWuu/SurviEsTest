@@ -1,5 +1,4 @@
 ﻿public interface IGameManager
 {
-    void EndGame();
-    void StartGame();
+    void UpdateGameState(GameManager.GameState state);
 }

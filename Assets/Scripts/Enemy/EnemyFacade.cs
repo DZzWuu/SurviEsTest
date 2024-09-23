@@ -12,11 +12,11 @@ namespace Scripts.Enemy
         [SerializeField] private EnemyConfig[] m_enemyConfig;
         [SerializeField] private Animator m_animator;
 
-        [SerializeField] private Health m_health;
         [SerializeField] private EnemyStateHandler m_stateHandler;
 
         //[Inject]
-        private  SignalBus m_signalBus;
+        private Health m_health;
+        private SignalBus m_signalBus;
 
         private IMemoryPool m_pool;
 
@@ -56,7 +56,7 @@ namespace Scripts.Enemy
 
 
             m_animator.runtimeAnimatorController = m_enemyConfig[random].RuntimeAnimatorController;
-            m_health.SetHealth(m_enemyConfig[random].MaxHealth);
+            //m_health.SetHealth(m_enemyConfig[random].MaxHealth);
             //m_stateHandler.SetEnemySpeed(m_enemyConfig[random].MovementSpeed);
         }
 

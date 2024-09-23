@@ -22,32 +22,32 @@ namespace Scripts.Initialization
             Addressables.InitializeAsync();
         }
 
-        private async void Start()
-        {
-            //Debug.Log("Initialization...");
+        //private async void Start()
+        //{
+        //    //Debug.Log("Initialization...");
 
-            await Init();
-        }
+        //    await Init();
+        //}
 
-        private async UniTask Init()
-        {
-            await UniTask.Delay(TimeSpan.FromSeconds(1f));
-            await LoadGameplayScene();
+        //private async UniTask Init()
+        //{
+        //    await UniTask.Delay(TimeSpan.FromSeconds(1f));
+        //    await LoadGameplayScene();
 
-        }
+        //}
 
 
         private async UniTask LoadGameplayScene()
         {
-            try
-            {
-                AsyncOperationHandle handle = m_gameplayScene.LoadSceneAsync(UnityEngine.SceneManagement.LoadSceneMode.Single, true);
-                await handle.ToUniTask();
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"Unable to load gameplay scene: {ex.Message}");
-            }
+            //try
+            //{
+            //    AsyncOperationHandle handle = m_gameplayScene.LoadSceneAsync(UnityEngine.SceneManagement.LoadSceneMode.Single, true);
+            //    await handle.ToUniTask();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Debug.LogError($"Unable to load gameplay scene: {ex.Message}");
+            //}
         }
 
     }

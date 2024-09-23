@@ -33,7 +33,9 @@ public class UIManager : MonoBehaviour
 
     private void EndGame()
     {
-        m_endScreen.gameObject.SetActive(true);
+        m_killedEnemyCount = 0; 
+        m_levelBarSlot.BindKills(0);
+        //m_endScreen.gameObject.SetActive(true);
     }
 
     private void OnUpgradeStats(UpgradeStatsSignal signal)

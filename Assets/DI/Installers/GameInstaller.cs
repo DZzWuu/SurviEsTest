@@ -16,7 +16,7 @@ public class GameInstaller : MonoInstaller
         InstallBulletFactory();
         InstallExperienceGemsFactory();
         InstallLootFactory();
-        InstallSignals();
+        //InstallSignals();
     }
 
     private void InstallGameManager()
@@ -67,20 +67,20 @@ public class GameInstaller : MonoInstaller
             .UnderTransformGroup("Loot"));
     }
 
-    private void InstallSignals()
-    {
-        GameSignalsInstaller.Install(Container);
+    //private void InstallSignals()
+    //{
+    //    GameSignalsInstaller.Install(Container);
 
-        //SignalBusInstaller.Install(Container);
+    //    //SignalBusInstaller.Install(Container);
 
-        //Container.DeclareSignal<EndGameSignal>();
-        //Container.DeclareSignal<KillEnemySignal>();
-        //Container.DeclareSignal<UpgradeAmmoSignal>();
-        //Container.DeclareSignal<PlayertHealthSignal>();
-        //Container.DeclareSignal<ExperienceSignal>();
-        //Container.DeclareSignal<UpgradeLevelDataSignal>();
-        //Container.DeclareSignal<UpgradeStatsSignal>();
-    }
+    //    //Container.DeclareSignal<EndGameSignal>();
+    //    //Container.DeclareSignal<KillEnemySignal>();
+    //    //Container.DeclareSignal<UpgradeAmmoSignal>();
+    //    //Container.DeclareSignal<PlayertHealthSignal>();
+    //    //Container.DeclareSignal<ExperienceSignal>();
+    //    //Container.DeclareSignal<UpgradeLevelDataSignal>();
+    //    //Container.DeclareSignal<UpgradeStatsSignal>();
+    //}
 
     [Serializable]
     public class Settings
